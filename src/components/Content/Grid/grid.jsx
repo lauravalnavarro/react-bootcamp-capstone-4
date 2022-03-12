@@ -1,29 +1,40 @@
-import React, { Component } from 'react';
 import Card from '../Card/card';
-
-import featureProducts from '../../../mocks/es-mx/featured-products.json';
 
 import './grid.css';
 
-const Grid = () => {
+const Grid = ({products}) => {
+
+    const cols = 4;
+    const rows = products.length/cols;
+    const newCard = {};
+   
+      
+    const grid =[];
+    for (let row = 0; row < rows; row++) {
+        const currentRow = [];
+        for (let col = 0; col < cols; col++) {
+            currentRow.push(newCard);
+        }
+        grid.push(currentRow);            
+    }
+    console.log(grid); 
+
     return ( 
         <div className='grid-container'>
-            {Object.keys(featureProducts.results).map((key, index)=>{
-                console.log(featureProducts.results[key].data.mainimage.url);
-                <img src={featureProducts.results[key].data.mainimage.url} alt="" />
-                {/*
-                    <Card
-                        key={index}
-                        imgUrl = {featureProducts.results[key].data.mainimage.url}
-                        alt={featureProducts.results[key].data.mainimage.alt}
-                        text={featureProducts.results[key].data.name}
-                    />
-                    */
-                }   
-                
-      
-                
-            })}
+           {
+                products.map((product) => {
+                    return <div className='node' key={product.id}>
+                        {console.log(product.data.name)}
+                        <Card                                
+                        imgUrl = {product.data.mainimage.url}
+                        alt={product.data.mainimage.alt}
+                        text={product.data}
+                        />                   
+                    </div>
+                    
+                })               
+               
+            }
         </div>
      );
 }

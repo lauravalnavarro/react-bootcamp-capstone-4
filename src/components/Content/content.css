@@ -2,6 +2,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #9fd3c7;
-    height: 80vh;
+    background: #ececec;
+}
+
+.grid-container{
+    justify-content: center;
+}
+
+.grid-title{
+    font-size: 22px;
+    color: gray;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    margin-left: 8.5%;
+    margin-right: 8.5%;
+    margin-bottom: 3%;
+    background-color: #fafafa;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
 }

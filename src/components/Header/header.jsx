@@ -11,7 +11,7 @@ const Header = () => {
             <div className='header-parent'>
                 <div className='left-header'>
                     <div className='header-logo'>
-                        Lau
+                        Ecommerce Lau
                     </div>
                 </div>                
                 <div className='right-header'>
