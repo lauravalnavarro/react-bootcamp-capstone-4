@@ -1,9 +1,19 @@
 .content-container{
-    display: flex;
     justify-content: center;
     align-items: center;
     background: #ececec;
 }
+.welcome-container{
+    display: flex;
+    background-color:#385170;
+    color: white;
+    font-weight: bold;
+    font-size: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    max-height: 50%;
+}
+
+
 
 .grid-container{
     justify-content: center;
@@ -19,6 +29,9 @@
     margin-bottom: 3%;
     background-color: #fafafa;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
-
+.carousel-container{
+    max-width: 100%;
+    height: auto;
 }

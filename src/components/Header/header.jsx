@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ShoppingIcon from '../../Utilidades/Shopping.svg';
 import Hamburger from '../../Utilidades/hamburger.svg';
+import Logo from '../../Utilidades/ecommerceLogo.png';
 
 import './header.css'
 
@@ -11,7 +12,7 @@ const Header = () => {
             <div className='header-parent'>
                 <div className='left-header'>
                     <div className='header-logo'>
-                        Ecommerce Lau
+                        <img src={Logo} alt="Shopping logo" />
                     </div>
                 </div>                
                 <div className='right-header'>

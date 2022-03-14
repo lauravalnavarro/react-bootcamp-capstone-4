@@ -1,11 +1,16 @@
 import './App.css';
-import { useFeaturedBanners } from './utils/hooks/useFeaturedBanners';
 import Home from '../src/components/Home/home.jsx';
+import { useFeaturedBanners } from './utils/hooks/useFeaturedBanners';
 
 function App() {
+  const { data, isLoading } = useFeaturedBanners();
+  console.log(data, isLoading);
   return (
     <div className="App">
-      <Home/>
+      <Home
+        data={data}
+        isLoading ={isLoading}
+      />
     </div>
   );
 }

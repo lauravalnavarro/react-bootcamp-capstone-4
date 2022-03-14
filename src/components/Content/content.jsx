@@ -1,16 +1,26 @@
-import React, { Component } from 'react';
-import banners from '../../mocks/es-mx/featured-banners.json'
-
+import React from 'react';
 import './content.css'
 
 import Grid from './Grid/grid';
+import CarouselField from './Carousel/carousel';
 
 import featuredProducts from '../../mocks/es-mx/featured-products.json';
+import banners from '../../mocks/es-mx/featured-banners.json'
 
-const Content = () => {
+const Content = (props) => {
     const products = featuredProducts.results;
+    const carouselProducts = banners.results;
+    console.log(props);
+    
     return ( 
         <div className='content-container'>
+            <div className='welcome-container'>
+                <div className='vertical-carousel'>
+                    <CarouselField
+                        products={carouselProducts}
+                    />
+                </div>
+            </div>
             <div className='grid-container'>
                 <div className='grid-title'>
                     Productos de temporada
@@ -20,7 +30,8 @@ const Content = () => {
                         products ={products}
                     />
                 </div>                
-            </div>            
+            </div>
+
         </div>
      );
 }
