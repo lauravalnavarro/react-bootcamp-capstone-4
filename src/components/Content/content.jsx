@@ -5,11 +5,13 @@ import Grid from './Grid/grid';
 import CarouselField from './Carousel/carousel';
 
 import featuredProducts from '../../mocks/es-mx/featured-products.json';
-import banners from '../../mocks/es-mx/featured-banners.json'
+import banners from '../../mocks/es-mx/featured-banners.json';
+import productsCategories from '../../mocks/es-mx/product-categories.json';
 
 const Content = (props) => {
     const products = featuredProducts.results;
     const carouselProducts = banners.results;
+    const carouselCategories= productsCategories.results;
     console.log(props);
     
     return ( 
@@ -30,6 +32,11 @@ const Content = (props) => {
                         products ={products}
                     />
                 </div>                
+            </div>
+            <div className='final-carousel'>
+                <CarouselField
+                    products={carouselCategories}
+                />
             </div>
 
         </div>
