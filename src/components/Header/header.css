@@ -17,6 +17,12 @@
     font-size: 30px;
     max-height: 200px;
     max-width: 200px;
+    cursor: pointer;
+}
+
+.header-logo{
+    width: fit-content;
+    cursor: pointer;
 }
 
 .header-shoppingIcon img{
@@ -31,7 +37,7 @@
 }
 
 .left-header{
-    width: 5%;
+    width: fit-content;
     justify-content: flex-start;
 }
 

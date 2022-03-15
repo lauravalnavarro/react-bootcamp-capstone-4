@@ -44,7 +44,5 @@ export function useFeaturedBanners() {
     };
   }, [apiRef, isApiMetadataLoading]);
 
-  console.log(featuredBanners);
-
   return featuredBanners;
 }

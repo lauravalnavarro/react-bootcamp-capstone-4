@@ -9,7 +9,9 @@ const Card = (imgUrl, alt, text) => {
                 <img src={imgUrl.imgUrl} alt={alt} />
             </div>
             <div className='card-text'>
-                <span>{imgUrl.text.name}</span>
+                <div className='name'>{imgUrl.text.name}</div>
+                <div className='category'>{`Categoría: ${imgUrl.text.category.slug}`}</div>
+                <div className='price'>{`Precio: $${imgUrl.text.price}`}</div>
             </div>
         </div>
      );
