@@ -9,7 +9,7 @@ const CarouselField = ({products}) => {
             products.map(product =>{
               return(
                 <div key={product.id}>
-                    <img src={product.data.main_image.url} />
+                    <img src={product.data.main_image.url} alt={product.data.main_image.alt}/>
                     <p className="legend">{product.data.title}</p>
                 </div>
               )
