@@ -13,8 +13,6 @@
     max-height: 50%;
 }
 
-
-
 .grid-container{
     justify-content: center;
 }
@@ -32,4 +30,24 @@
 .carousel-container{
     max-width: 100%;
     height: auto;
+}
+
+.btn-view-all{
+    background-color: #142d4c; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-view-all:hover{
+    background-color:#385170 ;
 }

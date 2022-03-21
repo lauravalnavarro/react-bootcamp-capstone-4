@@ -1,6 +1,6 @@
-import Card from '../Card/card';
+import Card from '../Card/Card';
 
-import './grid.css';
+import './Grid.css';
 
 const Grid = ({products}) => {
     return ( 

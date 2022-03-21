@@ -1,44 +1,31 @@
 import React from 'react';
-import './content.css'
+import './Content.css'
 
-import Grid from './Grid/grid';
-import CarouselField from './Carousel/carousel';
 
-import featuredProducts from '../../mocks/es-mx/featured-products.json';
-import banners from '../../mocks/es-mx/featured-banners.json';
+import ProductList from './ProductList/ProductList';
+
+
 import productsCategories from '../../mocks/es-mx/product-categories.json';
+import HomeContent from './HomeContent';
 
-const Content = (props) => {
-    const products = featuredProducts.results;
-    const carouselProducts = banners.results;
+
+
+const Content = ({allProducts, handlerAllProducts}) => {
+
     const carouselCategories= productsCategories.results;
-    console.log(props);
     
     return ( 
         <div className='content-container'>
-            <div className='welcome-container'>
-                <div className='vertical-carousel'>
-                    <CarouselField
-                        products={carouselProducts}
-                    />
-                </div>
-            </div>
-            <div className='grid-container'>
-                <div className='grid-title'>
-                    Productos de temporada
-                </div>
-                <div className='grid-content'>
-                    <Grid
-                        products ={products}
-                    />
-                </div>                
-            </div>
-            <div className='final-carousel'>
-                <CarouselField
-                    products={carouselCategories}
+            {allProducts? 
+                <ProductList
+                    categories ={carouselCategories}
                 />
-            </div>
-
+            : 
+            <HomeContent
+                handlerAllProducts={handlerAllProducts}
+                carouselCategories={carouselCategories}
+            />
+            }
         </div>
      );
 }
