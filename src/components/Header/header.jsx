@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ShoppingIcon from '../../Utilidades/Shopping.svg';
-import Hamburger from '../../Utilidades/hamburger.svg';
 import Logo from '../../Utilidades/ecommerceLogo.png';
 
-import './header.css'
+import './Header.css'
 
 
 const Header = (props) => {

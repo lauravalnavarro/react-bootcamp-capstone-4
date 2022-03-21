@@ -1,4 +1,4 @@
-import './sideBar.css';
+import './SideBar.css';
 
 const SideBar = ({categories, selectCategory}) => {
 
