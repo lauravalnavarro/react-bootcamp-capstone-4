@@ -2,6 +2,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 
 const CarouselField = ({products}) => {
+  console.log(products);
     return (
       <div className="carousel-container">
         <Carousel>

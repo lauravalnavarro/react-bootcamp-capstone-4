@@ -3,10 +3,11 @@ import Card from '../Card/Card';
 import './Grid.css';
 
 const Grid = ({products}) => {
+    console.log(products);
     return ( 
         <div className='grid-container'>
            {
-                products.map((product) => {
+                products.results.map((product) => {
                     return <div className='node' key={product.id}>
                         <Card                                
                         imgUrl = {product.data.mainimage.url}

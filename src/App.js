@@ -1,15 +1,11 @@
 import './App.css';
-import Home from '../src/components/Home/Home.jsx';
-import { useFeaturedBanners } from './utils/hooks/useFeaturedBanners';
+import Home from './components/Home/Home.jsx';
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
-  const { data, isLoading } = useFeaturedBanners();
   return (
     <div className="App">
-      <Home
-        data={data}
-        isLoading ={isLoading}
-      />
+      <Home/>
     </div>
   );
 }

@@ -1,19 +1,35 @@
 import Grid from './Grid/Grid';
 import CarouselField from './Carousel/Carousel';
 
-import featuredProducts from '../../mocks/es-mx/featured-products.json';
+import {useNavigate} from 'react-router-dom';
+
 import banners from '../../mocks/es-mx/featured-banners.json';
+import { useFeaturedBanners } from '../../utils/hooks/useFeaturedBanners';
+import { useFeaturedProducts } from '../../utils/hooks/useFeaturedProducts';
 
-const HomeContent = ({handlerAllProducts, carouselCategories}) => {
-    const products = featuredProducts.results;
-    const carouselProducts = banners.results;
 
-    return ( 
-        <div className='home-page'>                       
+const HomeContent = () => {
+    const {data:featuredBanners, isLoading} = useFeaturedBanners();
+    const {data:featuredProducts, isLoading:isLoadingProducts} = useFeaturedProducts();
+  
+    console.log(featuredProducts.results);
+
+    const products = featuredProducts;
+    const carouselProducts = banners.results;    
+
+    const navigate = useNavigate();
+
+    const changeRoute = ()=> {
+        navigate('/products');
+    }
+    if(isLoading || isLoadingProducts) {return <div>Loading...</div>}
+    return (          
+
+        <div className='home-page'>                      
                 <div className='welcome-container'>
                     <div className='featured-banners'>
                         <CarouselField
-                            products={carouselProducts}
+                            products={featuredBanners.results}
                         />
                     </div>
                 </div>
@@ -27,16 +43,17 @@ const HomeContent = ({handlerAllProducts, carouselCategories}) => {
                         />
                     </div>
                     <button className='btn-view-all'
-                        onClick={handlerAllProducts()}>
+                        onClick={changeRoute}>
                             View all products
                     </button>                
                 </div>
                 <div className='product-categories'>
                     <CarouselField
-                        products={carouselCategories}
+                        products={featuredBanners.results}
                     />
                 </div>
         </div>
+   
 
      );
 }

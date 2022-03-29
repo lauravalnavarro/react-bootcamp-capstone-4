@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
 import ShoppingIcon from '../../Utilidades/Shopping.svg';
 import Logo from '../../Utilidades/ecommerceLogo.png';
+import {useNavigate} from 'react-router-dom';
 
 import './Header.css'
 
 
 const Header = (props) => {
-
+    const navigate = useNavigate();
+    
     const [valueTerm, setValueTerm] = useState('');
 
     const hanlderSearchInput = (e)=>{
         setValueTerm(e.target.value);
     }
 
+    const changeRoute = ()=> {
+        navigate('/products');
+    }
+
     return ( 
         <div className='header-container'>
             <div className='header-parent'>
                 <div className='left-header'>
-                    <div className='header-logo' onClick={props.handlerAllProducts()}>
+                    <div className='header-logo' onClick={changeRoute}>
                         <img src={Logo} alt="Shopping logo" />
                     </div>
                 </div>

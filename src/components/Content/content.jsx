@@ -1,11 +1,8 @@
 import React from 'react';
 import './Content.css'
-
+import productsCategories from '../../mocks/es-mx/product-categories.json';
 
 import ProductList from './ProductList/ProductList';
-
-
-import productsCategories from '../../mocks/es-mx/product-categories.json';
 import HomeContent from './HomeContent';
 
 
